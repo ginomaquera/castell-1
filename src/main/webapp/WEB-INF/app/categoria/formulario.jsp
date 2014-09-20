@@ -28,9 +28,7 @@
                             <div class="col-sm-10">
                                 <input type="text" name="nombre" class="form-control" value="${categoria.nombre}" >
                             </div>
-                        </div>
-
-                        <form:errors path="*" cssClass="errorblock" element="div" />
+                        </div>                       
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">

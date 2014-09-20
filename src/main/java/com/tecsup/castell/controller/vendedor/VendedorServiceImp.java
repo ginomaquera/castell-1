@@ -51,14 +51,13 @@ public class VendedorServiceImp implements VendedorService {
             usuario.setEstado(EstadoEnum.ACTIVO.toString());
             usuario.setUsername(persona.getEmail());
             usuario.setPassword(persona.getEmail());
+            usuario.setRol(RolEnum.VENTA.toString());
             usuarioDAO.save(usuario);
             
         } else {
             personaDAO.update(persona);
-
             Usuario usuario = persona.getUsuario();
-            usuario.setUsername(persona.getEmail());
-            usuario.setRol(RolEnum.VENTA.toString());
+            usuario.setUsername(persona.getEmail());            
             usuarioDAO.update(usuario);
         }
     }
@@ -69,9 +68,9 @@ public class VendedorServiceImp implements VendedorService {
         Persona persona = vendedor.getPersona();
         Usuario usuario = persona.getUsuario();
 
-        usuarioDAO.delete(usuario);
-        personaDAO.delete(persona);
+        usuarioDAO.delete(usuario);        
         vendedorDAO.delete(vendedor);
+        personaDAO.delete(persona);
     }
 
     @Override
