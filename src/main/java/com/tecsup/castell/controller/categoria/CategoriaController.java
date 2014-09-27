@@ -20,7 +20,6 @@ public class CategoriaController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(Model model) {
-
         model.addAttribute("categorias", service.all());
         return "categoria/index";
     }

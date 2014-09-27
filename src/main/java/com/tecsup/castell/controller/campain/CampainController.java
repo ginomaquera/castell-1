@@ -10,7 +10,6 @@ import com.tecsup.castell.model.Campain;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 
-
 @Controller
 @SessionAttributes("campain")
 @RequestMapping("campain")

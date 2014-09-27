@@ -11,8 +11,11 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="#">José EA</a></li>
+                
+                <li><a href="#">${usuario}</a></li>
+                <li>
+                    <a href="<%=request.getContextPath()%>/logout" />Logout</a>
+                </li>
             </ul>
         </div>
     </div>
